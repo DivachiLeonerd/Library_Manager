@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Library_Manager.View.CustomControls"
              mc:Ignorable="d" 
              Height="320" Width="320">
-    <Grid>
+    <Grid Name="CustomCommandList">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -24,6 +24,7 @@
         <Button Grid.Column="0" Grid.Row="3" Content="Circulation" Margin="30 10 10 20" Padding="10"  Background="DarkGray" FontSize="20"/>
         <Button Grid.Column="1" Grid.Row="0" Content="Users" Margin="10 20 10 10" Padding="10" Background="DarkGray"  FontSize="20"/>
         <Button Grid.Column="1" Grid.Row="1" Content="Employees" Margin="10 10 10 20" Padding="10" Background="DarkGray" FontSize="20"/>
-        <Button Grid.Column="1" Grid.Row="2" Content="About LibMan" Margin="10 10 10 20" Padding="10" Background="DarkGray" FontSize="20"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="About us" Margin="10 10 10 20" Padding="10" Background="DarkGray" FontSize="20"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="Help" Margin="10 10 10 20" Padding="10" Background="DarkGray" FontSize="20"/>
     </Grid>
 </UserControl>

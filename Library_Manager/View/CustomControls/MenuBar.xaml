@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Library_Manager.View.CustomControls"
              mc:Ignorable="d" 
              Height="21" d:DesignWidth="800">
-    <Grid>
+    <Grid Name="CustomMenuBar">
         <Grid.RowDefinitions>
             <RowDefinition Height="21"/>
         </Grid.RowDefinitions>
@@ -15,17 +15,17 @@
             <ColumnDefinition Width="30*"/>
             <ColumnDefinition Width="35*"/>
         </Grid.ColumnDefinitions>
-        <Menu Grid.Column="0" Background="LightGray">
+        <Menu Name="MenuBarLeft" Grid.Column="0" Background="LightGray">
             <MenuItem  Header="Settings"  Name="SearchBox" FontSize="12" Background="LightGray">
                 <MenuItem Header="Exit" FontSize="12" Background="LightGray"/>
             </MenuItem>
-            <TextBox  Name="Search" Text="Search..." FontSize="12" Width="80"/>
+            <TextBox Name="Search" Text="Search..." FontSize="12" Width="80"/>
             <MenuItem   Header="Books" FontSize="12" Background="LightGray"/>
         </Menu>
         <Rectangle  Grid.Column="1" Fill="LightGray"/>
         <TextBlock  Grid.Column="1" HorizontalAlignment="Center" TextAlignment="Center" Text="Afonso's Library-LibMan2023"/>
 
-        <Menu FlowDirection="RightToLeft" Grid.Column="2" Background="LightGray" >
+        <Menu Name="MenuBarRight" FlowDirection="RightToLeft" Grid.Column="2" Background="LightGray" >
             <MenuItem   Header="Authors" FontSize="12" Background="LightGray"/>
             <MenuItem   Header="Users" FontSize="12" Background="LightGray" VerticalAlignment="Top"/>
             <MenuItem   Header="Check-in" FontSize="12" Background="LightGray" VerticalAlignment="Top"/>

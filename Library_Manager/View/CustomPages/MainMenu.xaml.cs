@@ -1,8 +1,7 @@
-﻿using Library_Manager.View.CustomPages;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,18 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Library_Manager
+namespace Library_Manager.View.CustomPages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainMenu : Page
     {
-        public MainWindow()
+        public MainMenu()
         {
-            InitializeComponent();
-            Height = 500;
-            Width = 600;
+            InitializeComponent();;
         }
+
     }
 }

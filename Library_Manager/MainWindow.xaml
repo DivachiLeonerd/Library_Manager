@@ -5,21 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library_Manager"
         xmlns:UserControls="clr-namespace:Library_Manager.View.CustomControls"
+        xmlns:UserPages="clr-namespace:Library_Manager.View.CustomPages"
         mc:Ignorable="d"
         Title="My project"
-        Height="450" Width="800">
+        x:Name="Main">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="21"/>
-            <RowDefinition Height="85*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="50*"/>
-            <ColumnDefinition Width="25*"/>
-        </Grid.ColumnDefinitions>
-        <UserControls:MenuBar Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"/>
-        <UserControls:CommandList Grid.Row="1" Grid.Column="1"/>
+        <Frame x:Name="MainMenuFrame" Source="/View/CustomPages/DBCreationPage.xaml" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
