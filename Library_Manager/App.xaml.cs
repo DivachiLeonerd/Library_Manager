@@ -15,4 +15,5 @@ namespace Library_Manager
     public partial class App : Application
     {
     }
+
 }

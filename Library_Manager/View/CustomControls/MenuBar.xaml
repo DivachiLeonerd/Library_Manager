@@ -17,10 +17,10 @@
         </Grid.ColumnDefinitions>
         <Menu Name="MenuBarLeft" Grid.Column="0" Background="LightGray">
             <MenuItem  Header="Settings"  Name="SearchBox" FontSize="12" Background="LightGray">
-                <MenuItem Header="Exit" FontSize="12" Background="LightGray"/>
+                <MenuItem x:Name="ExitMenuItem" Header="Exit" FontSize="12" Background="LightGray" Click="ExitMenuItem_Click"/>
             </MenuItem>
             <TextBox Name="Search" Text="Search..." FontSize="12" Width="80"/>
-            <MenuItem   Header="Books" FontSize="12" Background="LightGray"/>
+            <MenuItem  x:Name="BooksMenuItem" Click="BooksMenuItem_Click" Header="Books" FontSize="12" Background="LightGray"/>
         </Menu>
         <Rectangle  Grid.Column="1" Fill="LightGray"/>
         <TextBlock  Grid.Column="1" HorizontalAlignment="Center" TextAlignment="Center" Text="Afonso's Library-LibMan2023"/>

@@ -28,7 +28,11 @@ namespace Library_Manager.View.CustomPages
             PasswordMsgVisibility = Visibility.Hidden;
         }
 
-        private string? libraryName;
+        private string?     libraryName;
+        private string?     admin;
+        private string?     creationpassword;
+        private string?     configurationType;
+        private Visibility  passwordMsgVisibility;
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -41,9 +45,6 @@ namespace Library_Manager.View.CustomPages
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("LibraryName"));
             }
         }
-
-        private string? admin;
-
         public string Admin
         {
             get { return admin; }
@@ -53,8 +54,6 @@ namespace Library_Manager.View.CustomPages
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Admin"));
             }
         }
-        private string? creationpassword;
-
         public string CreationPassword
         {
             get { return creationpassword; }
@@ -65,7 +64,9 @@ namespace Library_Manager.View.CustomPages
             }
         }
 
-        private string? configurationType;
+
+
+
 
         public string ConfigurationType
         {
@@ -77,7 +78,6 @@ namespace Library_Manager.View.CustomPages
             }
         }
 
-        private Visibility passwordMsgVisibility;
         public Visibility PasswordMsgVisibility
         {
             get { return passwordMsgVisibility; }
@@ -88,20 +88,23 @@ namespace Library_Manager.View.CustomPages
             }
         }
 
-        private static bool hasBeenWarned = false;
+        private int timesWarned;
         private void NextButtonClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(CreationPassword))
             {
+                PasswordMsgVisibility = Visibility.Visible;
                 if (PasswordMsgVisibility == Visibility.Visible)
-                    hasBeenWarned = true;
-                else
-                    PasswordMsgVisibility = Visibility.Visible;
+                    timesWarned++;
             }
             else
-                hasBeenWarned = true;
-            if (string.IsNullOrEmpty(LibraryName) || string.IsNullOrEmpty(Admin) || string.IsNullOrEmpty(ConfigurationType)
-                || (hasBeenWarned == false))
+            {
+                PasswordMsgVisibility = Visibility.Hidden;
+                timesWarned = 0;
+            }
+            if (string.IsNullOrEmpty(LibraryName) || string.IsNullOrEmpty(Admin))
+                return;
+            else if (string.IsNullOrEmpty(CreationPassword) && timesWarned < 2)
                 return;
             else
             {

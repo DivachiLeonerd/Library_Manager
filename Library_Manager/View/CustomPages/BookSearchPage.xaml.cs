@@ -13,27 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Library_Manager.View.CustomControls
+namespace Library_Manager.View.CustomPages
 {
     /// <summary>
-    /// Interaction logic for MenuBar.xaml
+    /// Interaction logic for BookSearchPage.xaml
     /// </summary>
-    public partial class MenuBar : UserControl
+    public partial class BookSearchPage : Page
     {
-        public MenuBar()
+        public BookSearchPage()
         {
             InitializeComponent();
         }
-
-        private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            System.Windows.Application.Current.Shutdown();
-        }
-
-        private void BooksMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            //Uri bookSearchPage = new Uri("./View/CustomPages/BookSearchPage");
-        }
     }
-
 }
